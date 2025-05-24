@@ -41,6 +41,18 @@ def main():
     for id, decoded in tokalicious:
         print(f"{id}={decoded}")
 
+    new_text = "AKwfleebletrarnk"
+    encoded = tokeniser.encode(new_text, allowed_special={"<|endoftext|>"})
+    decoded = tokeniser.decode(encoded)
+
+    print(new_text)
+    print(encoded[:100])
+    print(decoded[:100])
+
+    tokalicious = [(x, tokeniser.decode([x])) for x in encoded]
+    for id, decoded in tokalicious:
+        print(f"{id}={decoded}")
+
 
 if __name__ == "__main__":
     main()

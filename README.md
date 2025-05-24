@@ -2,4 +2,10 @@
 
 Book code samples here: https://github.com/rasbt/LLMs-from-scratch/tree/main
 
+Torch install command for AMD GPUs on linux: 
+
+`pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.3`
+
+
+
 
